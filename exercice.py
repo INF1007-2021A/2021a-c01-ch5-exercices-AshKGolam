@@ -6,24 +6,49 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
+        if number >= 0:
+            return number
+        else:
+            return -number
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    nom = ""
 
-    return [""]
+    nouveau = []
+    for element in prefixes:
+        nom = element + suffixe
+        nouveau.append(nom)
+    return nouveau
+
 
 
 def prime_integer_summation() -> int:
-    return 0
+    sum = 0
+    for num in range(0, 101):
+        j = num - 1
+        while j >= 1 and num % j:
+            j = j - 1
+        if j == 1:
+            sum = sum + num
+    return sum
+
 
 
 def factorial(number: int) -> int:
-    return 0
+    i = number - 1
+    while i >= 1:
+        number = number * i
+        i = i - 1
+    return number
 
 
 def use_continue() -> None:
+    for i in range(1,11):
+        if i == 5:
+            continue
+        print(i)
     pass
 
 
